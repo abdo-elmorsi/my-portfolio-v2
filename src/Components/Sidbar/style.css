@@ -1,0 +1,7 @@
+ul li.active {
+  background-color: white;
+  color: #a43f49;
+}
+ul li {
+  transition: all 0.5s ease-in-out;
+}

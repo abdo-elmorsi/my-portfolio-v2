@@ -1,0 +1,40 @@
+{
+  "Works": [
+    {
+      "id": 1,
+      "Src": "./images/portfolio-01.jpg",
+      "Name": "first",
+      "Desc": "using react"
+    },
+    {
+      "id": 2,
+      "Src": "./images/portfolio-02.jpg",
+      "Name": "second",
+      "Desc": "using react"
+    },
+    {
+      "id": 3,
+      "Src": "./images/portfolio-03.jpg",
+      "Name": "third",
+      "Desc": "using react"
+    },
+    {
+      "id": 4,
+      "Src": "./images/portfolio-04.jpg",
+      "Name": "forth",
+      "Desc": "using react"
+    },
+    {
+      "id": 5,
+      "Src": "./images/portfolio-05.jpg",
+      "Name": "fifth",
+      "Desc": "using react"
+    },
+    {
+      "id": 6,
+      "Src": "./images/portfolio-05.jpg",
+      "Name": "sex",
+      "Desc": "using react"
+    }
+  ]
+}

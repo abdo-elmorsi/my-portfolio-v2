@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { IoClose } from 'react-icons/io5';
+import "./style.css"
 import { FaFacebookF, FaTwitter, FaLinkedinIn, FaWhatsapp } from 'react-icons/fa';
 import { FiMenu } from 'react-icons/fi';
 function Sidbar() {
@@ -20,7 +21,7 @@ function Sidbar() {
 				<h2 className="text-3xl font-bold">Abdo Elmorsy</h2>
 				<span className="text-xs">Front End Developer</span>
 				<ul className="px-5 mt-8 lg:mt-16 flex flex-col">
-					<li className="py-5 border-t-2 border-white font-bold text-pase hover:bg-white hover:text-primary cursor-pointer">About Me</li>
+					<li className="active py-5 border-t-2 border-white font-bold text-pase hover:bg-white hover:text-primary cursor-pointer">About Me</li>
 					<li className="py-5 border-t-2 border-white font-bold text-pase hover:bg-white hover:text-primary cursor-pointer">What i'm good at</li>
 					<li className="py-5 border-t-2 border-white font-bold text-pase hover:bg-white hover:text-primary cursor-pointer">My Work</li>
 					<li className="py-5 border-b-2 border-t-2 border-white font-bold text-pase hover:bg-white hover:text-primary cursor-pointer">Contact Us</li>
