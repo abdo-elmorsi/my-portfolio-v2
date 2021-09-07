@@ -1,6 +1,5 @@
 import React from "react";
 import Header from "../header";
-import Container from "../Container";
 import Box from "../Box";
 import "../box.css";
 let Desc = `I Am A Front-End Developer With More Than Two Years Of Experience. I Am
@@ -38,14 +37,12 @@ let data = [
 ];
 function WhImGood() {
   return (
-    <Container>
-      <div className="text-white text-center border-gray-500 border-b-4 pb-20">
-        <Header Name="What I’m good at?" Desc={Desc} />
-        <div className="flex justify-around flex-wrap">
-          <Box data={data} />
-        </div>
+    <div className="text-white text-center border-gray-500 border-b-4 pb-20">
+      <Header Name="What I’m good at?" Desc={Desc} />
+      <div className="flex justify-around flex-wrap">
+        <Box data={data} />
       </div>
-    </Container>
+    </div>
   );
 }
 export default WhImGood;

@@ -3,22 +3,20 @@ import AboutMe from "./body/AboutMe/index";
 import WhImGood from "./body/WhImGood/index";
 import MyWorks from "./body/MyWorks/index";
 import ContactMe from "./body/ContactMe/index";
+import Container from "./body/Container";
 function App() {
   return (
-    <div
-      className="w-full flex justify-between bg-no-repeat bg-cover bg-center bg-fixed"
-      style={{ backgroundImage: "url(./images/page-bg.jpg)" }}
-    >
-      <div className="ml-0 lg:ml-20">
+    <Container>
+      <div className="md:w-3/12">
         <Sidbar />
       </div>
-      <div className="mr-0 md:mr-20 w-full md:w-6/12 lg:w-8/12">
+      <div className="px-6 md:px-12 md:w-9/12">
         <AboutMe />
         <WhImGood />
         <MyWorks />
         <ContactMe />
       </div>
-    </div>
+    </Container>
   );
 }
 

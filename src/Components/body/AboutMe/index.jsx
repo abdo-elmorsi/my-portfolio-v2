@@ -1,13 +1,11 @@
 import React from "react";
 import Header from "../header";
-import Container from "../Container";
 let Desc = `I Am A Front-End Developer With More Than Two Years Of Experience. I Am
 From Cairo, Egypt, And I Create Sites For Great People Around The World
 To Get More And More Experiences In Developing Sites.`;
 
 function AbouMe() {
   return (
-    <Container>
       <div className="text-white text-center border-gray-500 border-b-4 pb-20">
         <Header Name="About Us" Desc={Desc} />
         <div className="flex justify-between flex-col md:flex-row pb-20 border-b-2 border-gray-600">
@@ -43,7 +41,6 @@ function AbouMe() {
           </div>
         </div>
       </div>
-    </Container>
   );
 }
 export default AbouMe;
