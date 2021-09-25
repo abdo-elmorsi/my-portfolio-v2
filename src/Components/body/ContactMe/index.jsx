@@ -1,52 +1,65 @@
-import React from "react";
+import React, { useRef } from "react";
 import Header from "../header";
+import emailjs from "emailjs-com";
 function ContactMe() {
+  const formData = useRef();
+  const sendEmail = (e) => {
+    e.preventDefault();
+    emailjs
+      .sendForm(
+        "service_bkza1jq",
+        "template_wixdosw",
+        formData.current,
+        "user_ycFwwHNWHpDwHFWE3gajU"
+      )
+      .then(() => alert("Your message has been sent"))
+      .catch(() => alert("Sorry there is an error"));
+  };
   return (
     <div className="text-white text-center pb-20">
       <Header Name="Contact Me" />
       <div>
-        <form id="contact" action="" method="post">
+        <form method="POST" ref={formData} onSubmit={sendEmail}>
           <div className="flex justify-between">
             <input
               name="name"
               type="text"
               className="w-5/12 bg-third focus:bg-secondary pl-6 py-2 text-white border-2 focus:outline-none"
-              id="name"
               placeholder="Your name..."
-              required=""
+              required
             />
             <input
-              name="name"
-              type="text"
+              name="user-email"
+              type="email"
               className="w-5/12 bg-third focus:bg-secondary pl-6 py-2 text-white border-2 focus:outline-none"
-              id="name"
               placeholder="Your email..."
-              required=""
+              required
             />
           </div>
           <div className="my-8">
             <input
-              name="name"
+              name="user_subject"
               type="text"
               className="w-full bg-third focus:bg-secondary pl-6 py-2 text-white border-2 focus:outline-none"
-              id="name"
               placeholder="Subject..."
-              required=""
+              required
             />
           </div>
           <div>
             <textarea
               name="message"
-              rows="6"
+              cols="30"
+              rows="10"
               className="w-full text-white border-2 focus:outline-none bg-third  focus:bg-secondary p-3"
-              id="message"
               placeholder="Your message..."
-              required=""
+              required
             ></textarea>
           </div>
-          <button className="px-8 py-2 bg-white text-primary hover:text-white hover:bg-primary transition-all duration-500 font-bold mt-10">
-            SEND MESSAGE
-          </button>
+          <input
+            type="submit"
+            value="Send"
+            className="px-8 py-2 bg-white text-primary hover:text-white hover:bg-primary transition-all duration-500 font-bold mt-10"
+          ></input>
         </form>
       </div>
     </div>
