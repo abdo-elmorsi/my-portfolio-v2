@@ -2,6 +2,6 @@
 .box-2:hover > div img,
 .box-3:hover > div img,
 .box-4:hover > div img {
-  background: gray;
+  background: rgba(1, 1, 1, 0.4);
   border-radius: 50%;
 }

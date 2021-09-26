@@ -3,6 +3,7 @@ import { IoClose } from "react-icons/io5";
 import "./style.css";
 import {
   FaFacebookF,
+  FaGithub,
   FaTwitter,
   FaLinkedinIn,
   FaWhatsapp,
@@ -12,17 +13,45 @@ function Sidbar() {
   const [Menu, setMenu] = useState(false);
   let fun = () => (window.innerWidth < 768 ? setMenu(false) : setMenu(true));
   let icons = [
-    { icon: <FaFacebookF /> },
-    { icon: <FaTwitter /> },
-    { icon: <FaLinkedinIn /> },
-    { icon: <FaWhatsapp /> },
+    {
+      link: "https://www.facebook.com/profile.php?id=100011155869257",
+      title: "facebook",
+      icon: <FaFacebookF />,
+    },
+    {
+      link: "https://github.com/Abdo2711-coder",
+      title: "github",
+      icon: <FaGithub />,
+    },
+    {
+      link: "https://twitter.com/AbdoMoursy?s=09",
+      title: "twitter",
+      icon: <FaTwitter />,
+    },
+    {
+      link: "https://www.linkedin.com/in/abdelrahman-ahmed-163263205",
+      title: "linkedin",
+      icon: <FaLinkedinIn />,
+    },
+    {
+      link: "https://wa.me/201019084872",
+      title: "whatsApp",
+      icon: <FaWhatsapp />,
+    },
   ];
+  window.addEventListener("scroll", (_) => {
+    if (window.innerWidth < 768) {
+      if (Menu) {
+        setMenu(false);
+      }
+    }
+  });
   useEffect(() => {
     fun();
     window.onresize = () => fun();
   }, []);
   return (
-    <div className="h-screen overflow-y-auto absolute w-full md:relative">
+    <>
       <div
         onClick={() => setMenu(!Menu)}
         className="absolute top-0 left-0 z-0 flex justify-center md:hidden items-center w-12 h-12 bg-white text-primary cursor-pointer"
@@ -30,58 +59,69 @@ function Sidbar() {
         <FiMenu />
       </div>
       <div
-        className={`bg-primary text-center text-white min-h-screen pt-0 md:pt-10 md:block ${
-          Menu ? "" : "transform -translate-x-full opacity-0"
-        } transition duration-700 z-10 relative`}
+        className={`h-screen md:relative transform z-50 overflow-x-hidden 
+        ${Menu ? "w-full fixed" : "-translate-x-full absolute"}
+        `}
       >
         <div
-          onClick={() => setMenu(!Menu)}
-          className="flex justify-center md:hidden bg-white py-5 text-2xl text-primary cursor-pointer"
+          className={`
+          bg-primary text-center text-white min-h-screen pt-0 px-5 md:pt-10 md:block transform transition duration-700 z-10 relative
+          ${Menu ? "" : "-translate-x-full"}`}
         >
-          <IoClose />
+          <div
+            onClick={() => setMenu(!Menu)}
+            className="flex justify-center md:hidden bg-white py-5 text-2xl text-primary cursor-pointer"
+          >
+            <IoClose />
+          </div>
+          <div className="mb-8 mt-10 md:mt-0 w-4/12 mx-auto rounded-full overflow-hidden">
+            <img
+              className="w-full h-full"
+              src={"./images/author-image.jpg"}
+              alt=""
+            />
+          </div>
+          <h2 className="text-3xl font-bold">Abdo Elmorsy</h2>
+          <span className="text-xs">Front End Developer</span>
+          <div className="mt-8 lg:mt-16 flex flex-col">
+            <ul>
+              {["About Me", "What i'm good at", "My Work", "Contact Us"].map(
+                (ele, i) => {
+                  return (
+                    <li
+                      key={i}
+                      className={`py-5 border-t-2 ${
+                        i === 3 ? "border-b-2" : ""
+                      } border-white font-bold text-pase hover:bg-white hover:text-primary cursor-pointer`}
+                    >
+                      {<a href={`#${ele.split(" ")[0]}`}>{ele}</a>}
+                    </li>
+                  );
+                }
+              )}
+            </ul>
+          </div>
+          <div className="my-7">
+            <ul className="flex justify-around">
+              {icons.map((ele, index) => {
+                return (
+                  <li
+                    key={`ele-${index}`}
+                    className="flex items-center font-bold text-lg rounded-sm bg-primary p-2 hover:bg-white hover:text-primary cursor-pointer relative"
+                    data-title={`${ele.title}`}
+                  >
+                    <a href={`${ele.link}`}>{ele.icon}</a>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+          <footer className="border-secondary border-t-2 py-10 mb-30">
+            <p className="text-md">Copyright 2021 Abdo Ahmed</p>
+          </footer>
         </div>
-        <div className="mb-8 mt-10 md:mt-0 w-4/12 mx-auto rounded-full overflow-hidden">
-          <img
-            className="w-full h-full"
-            src={"./images/author-image.jpg"}
-            alt=""
-          />
-        </div>
-        <h2 className="text-3xl font-bold">Abdo Elmorsy</h2>
-        <span className="text-xs">Front End Developer</span>
-        <ul className="px-5 mt-8 lg:mt-16 flex flex-col">
-          {["About Me", "What i'm good at", "My Work", "Contact Us"].map(
-            (ele, index) => {
-              return (
-                <li
-                  key={`ele-${index}`}
-                  className={`py-5 border-t-2 ${
-                    index === 3 ? "border-b-2" : ""
-                  } border-white font-bold text-pase hover:bg-white hover:text-primary cursor-pointer`}
-                >
-                  {ele}
-                </li>
-              );
-            }
-          )}
-        </ul>
-        <ul className="px-10 my-7 flex justify-between">
-          {icons.map((ele, index) => {
-            return (
-              <li
-                key={`ele-${index}`}
-                className="flex items-center font-bold text-pase rounded-sm bg-primary p-3 hover:bg-white hover:text-primary cursor-pointer"
-              >
-                {ele.icon}
-              </li>
-            );
-          })}
-        </ul>
-        <footer className="border-secondary border-t-2 py-10 mb-30">
-          <p className="text-md">Copyright 2021 Abdo Ahmed</p>
-        </footer>
       </div>
-    </div>
+    </>
   );
 }
 export default Sidbar;

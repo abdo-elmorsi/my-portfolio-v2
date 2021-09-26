@@ -1,6 +1,8 @@
 import React, { useRef } from "react";
-import Header from "../header";
+import Header from "../Helpers/Headers/header";
+import Button from "../Helpers/Button";
 import emailjs from "emailjs-com";
+import toast from "react-hot-toast";
 function ContactMe() {
   const formData = useRef();
   const sendEmail = (e) => {
@@ -12,11 +14,20 @@ function ContactMe() {
         formData.current,
         "user_ycFwwHNWHpDwHFWE3gajU"
       )
-      .then(() => alert("Your message has been sent"))
-      .catch(() => alert("Sorry there is an error"));
+      .then(() => {
+        toast.success("Your message has been sent", {
+          style: { fontSize: "20px" },
+        });
+      })
+      .catch(() => {
+        toast.error("Sorry there is an error", {
+          style: { fontSize: "20px" },
+        });
+      });
+    formData.current.reset();
   };
   return (
-    <div className="text-white text-center pb-20">
+    <div id="Contact" className="text-white text-center pb-20">
       <Header Name="Contact Me" />
       <div>
         <form method="POST" ref={formData} onSubmit={sendEmail}>
@@ -50,16 +61,12 @@ function ContactMe() {
               name="message"
               cols="30"
               rows="10"
-              className="w-full text-white border-2 focus:outline-none bg-third  focus:bg-secondary p-3"
+              className="w-full text-white border-2 focus:outline-none bg-third  focus:bg-secondary p-3 mb-5"
               placeholder="Your message..."
               required
             ></textarea>
           </div>
-          <input
-            type="submit"
-            value="Send"
-            className="px-8 py-2 bg-white text-primary hover:text-white hover:bg-primary transition-all duration-500 font-bold mt-10"
-          ></input>
+          <Button msg={"Send"} />
         </form>
       </div>
     </div>

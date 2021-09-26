@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { FiSearch } from "react-icons/fi";
+import { FaGithub } from "react-icons/fa";
+import { FiExternalLink } from "react-icons/fi";
 import "./style.css";
 function Works() {
   const [Data, setData] = useState([]);
@@ -18,11 +19,14 @@ function Works() {
         <figure className="snip1321">
           <img src={e.Src} alt="sq-sample26" />
           <figcaption>
-            <a href={e.Src} data-lightbox="image-1" data-title="Caption">
-              <FiSearch />
-            </a>
-            <h4>{e.Name}</h4>
-            <span>{e.Desc}</span>
+            <div className="flex justify-around px-5">
+              <span className=" cursor-pointer">
+                <FiExternalLink />
+              </span>
+              <span className=" cursor-pointer">
+                <FaGithub />
+              </span>
+            </div>
           </figcaption>
         </figure>
       </div>

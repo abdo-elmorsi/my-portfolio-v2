@@ -1,7 +1,7 @@
 import React from "react";
-import Header from "../header";
-import Box from "../Box";
-import "../box.css";
+import Header from "../Helpers/Headers/header";
+import Box from "./Box";
+import "./Box.css";
 let Desc = `I Am A Front-End Developer With More Than Two Years Of Experience. I Am
 From Cairo, Egypt, And I Create Sites For Great People Around The World
 To Get Mor`;
@@ -37,7 +37,10 @@ let data = [
 ];
 function WhImGood() {
   return (
-    <div className="text-white text-center border-gray-500 border-b-4 pb-20">
+    <div
+      id="What"
+      className="text-white text-center border-gray-500 border-b-4 pb-20"
+    >
       <Header Name="What I’m good at?" Desc={Desc} />
       <div className="flex justify-around flex-wrap">
         <Box data={data} />
