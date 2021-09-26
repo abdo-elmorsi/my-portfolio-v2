@@ -39,13 +39,6 @@ function Sidbar() {
       icon: <FaWhatsapp />,
     },
   ];
-  window.addEventListener("scroll", (_) => {
-    if (window.innerWidth < 768) {
-      if (Menu) {
-        setMenu(false);
-      }
-    }
-  });
   useEffect(() => {
     fun();
     window.onresize = () => fun();
