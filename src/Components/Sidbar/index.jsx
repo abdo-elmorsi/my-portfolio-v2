@@ -52,7 +52,7 @@ function Sidbar() {
         <FiMenu />
       </div>
       <div
-        className={`h-screen md:relative transform z-50 overflow-x-hidden 
+        className={`ScrollBar h-screen md:relative transform z-50 overflow-auto
         ${Menu ? "w-full fixed" : "-translate-x-full absolute"}
         `}
       >
@@ -67,7 +67,7 @@ function Sidbar() {
           >
             <IoClose />
           </div>
-          <div className="mb-8 mt-10 md:mt-0 w-4/12 mx-auto rounded-full overflow-hidden">
+          <div className="my-5 md:mt-0 w-4/12 mx-auto rounded-full overflow-hidden">
             <img
               className="w-full h-full"
               src={"./images/author-image.jpg"}
@@ -76,7 +76,7 @@ function Sidbar() {
           </div>
           <h2 className="text-3xl font-bold">Abdo Elmorsy</h2>
           <span className="text-xs">Front End Developer</span>
-          <div className="mt-8 lg:mt-16 flex flex-col">
+          <div className="mt-8 lg:mt-14 flex flex-col">
             <ul>
               {["About Me", "What i'm good at", "My Work", "Contact Us"].map(
                 (ele, i) => {
@@ -94,7 +94,7 @@ function Sidbar() {
               )}
             </ul>
           </div>
-          <div className="my-7">
+          <div className="my-6">
             <ul className="flex justify-around">
               {icons.map((ele, index) => {
                 return (
@@ -109,7 +109,7 @@ function Sidbar() {
               })}
             </ul>
           </div>
-          <footer className="border-secondary border-t-2 py-10 mb-30">
+          <footer className="border-secondary border-t-2 py-8">
             <p className="text-md">Copyright 2021 Abdo Ahmed</p>
           </footer>
         </div>

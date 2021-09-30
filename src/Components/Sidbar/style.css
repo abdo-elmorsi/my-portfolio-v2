@@ -3,7 +3,7 @@ ul li.active {
   color: #a43f49;
 }
 ul li {
-  transition: all 0.5s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 div ul li[data-title]:hover::after {
   content: attr(data-title);
@@ -13,4 +13,8 @@ div ul li[data-title]:hover::after {
   color: #fff;
   font-size: 14px;
   opacity: 0.7;
+}
+
+.ScrollBar::-webkit-scrollbar {
+  display: none;
 }
