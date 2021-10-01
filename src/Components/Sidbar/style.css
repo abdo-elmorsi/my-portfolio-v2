@@ -3,7 +3,7 @@ ul li.active {
   color: #a43f49;
 }
 ul li {
-  transition: all 0.3s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 div ul li[data-title]:hover::after {
   content: attr(data-title);

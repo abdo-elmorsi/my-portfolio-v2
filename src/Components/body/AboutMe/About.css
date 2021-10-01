@@ -1,3 +1,31 @@
 #About img:hover {
   filter: none;
 }
+
+.is-img-loading {
+  opacity: 0;
+}
+
+.is-img-loaded {
+  animation: fadeIn 0.3s ease;
+  opacity: 1;
+}
+.rotate {
+  animation: rotate 1s ease infinite;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -1,5 +1,6 @@
 import React from "react";
 import "./About.css";
+import ImageLoader from "../Helpers/imageLoading";
 import Header from "../Helpers/Headers/header";
 import Button from "../Helpers/Button";
 let Desc = `I Am A Front-End Developer With More Than Two Years Of Experience. I Am
@@ -15,7 +16,7 @@ const AbouMe = () => {
       <Header Name="About Us" Desc={Desc} />
       <div className="flex justify-between flex-col md:flex-row pb-20 border-b-2 border-gray-600">
         <div className="w-full lg:w-6/12 rounded-lg overflow-hidden">
-          <img
+          <ImageLoader
             src={"./images/left-image.jpg"}
             className="filter blur-sm transition duration-500 ease-in-out"
             alt=""
@@ -46,7 +47,7 @@ const AbouMe = () => {
           <Button msg={"READ MORE"} />
         </div>
         <div className="w-full lg:w-6/12 rounded-lg overflow-hidden">
-          <img
+          <ImageLoader
             src={"./images/right-image.jpg"}
             className="filter blur-sm transition duration-500 ease-in-out"
             alt=""

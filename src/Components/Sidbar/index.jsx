@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { IoClose } from "react-icons/io5";
+import ImageLoader from "../body/Helpers/imageLoading";
 import "./style.css";
 import {
   FaFacebookF,
@@ -58,7 +59,7 @@ function Sidbar() {
       >
         <div
           className={`
-          bg-primary text-center text-white min-h-screen pt-0 px-5 md:pt-10 md:block transform transition duration-700 z-10 relative
+          bg-primary text-center text-white min-h-screen md:pt-10 md:block transform transition duration-700 z-10 relative
           ${Menu ? "" : "-translate-x-full"}`}
         >
           <div
@@ -68,7 +69,7 @@ function Sidbar() {
             <IoClose />
           </div>
           <div className="my-5 md:mt-0 w-4/12 mx-auto rounded-full overflow-hidden">
-            <img
+            <ImageLoader
               className="w-full h-full"
               src={"./images/author-image.jpg"}
               alt=""

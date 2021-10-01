@@ -17,7 +17,7 @@ function Works() {
         key={e.id}
       >
         <figure className="snip1321">
-          <img src={e.Src} alt="sq-sample26" className="w-full" />
+          <img src={e.Src} alt={`project-${e.id}`} className="w-full" />
           <figcaption>
             <div className="flex justify-around px-5">
               <span className=" cursor-pointer">
