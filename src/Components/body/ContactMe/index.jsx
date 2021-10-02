@@ -66,7 +66,7 @@ function ContactMe() {
               required
             ></textarea>
           </div>
-          <Button msg={"Send"}  px={"6"} />
+          <Button msg={"Send"} px={"6"} />
         </form>
       </div>
     </div>
