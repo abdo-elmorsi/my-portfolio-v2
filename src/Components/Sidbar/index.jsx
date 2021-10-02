@@ -75,7 +75,7 @@ function Sidbar() {
           className="fixed w-6 h-6 bottom-6 left-4 lg:bottom-8 lg:left-8 text-xl z-50"
           onClick={(_) => ScrollToTop()}
         >
-          <Button msg={<AiOutlineArrowUp />} px={"3"}></Button>
+          <Button msg={<AiOutlineArrowUp />} px={"5"}></Button>
         </div>
       )}
 
