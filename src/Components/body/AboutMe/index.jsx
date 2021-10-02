@@ -28,7 +28,7 @@ const AbouMe = () => {
             I study in Integrated Thebes Academy of Sciences
           </p>
           <p className="text-xs text-gray-500">Sep 2019 - Jul 2022</p>
-          <Button msg={"READ MORE"} />
+          <Button msg={"READ MORE"} px={"6"} py={"3"} />
         </div>
       </div>
 
@@ -44,7 +44,7 @@ const AbouMe = () => {
           ].map((item, i) => (
             <p key={i}>{item}</p>
           ))}
-          <Button msg={"READ MORE"} />
+          <Button msg={"READ MORE"} px={"6"} />
         </div>
         <div className="w-full lg:w-6/12 rounded-lg overflow-hidden">
           <ImageLoader

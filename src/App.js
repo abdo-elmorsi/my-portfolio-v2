@@ -8,7 +8,7 @@ function App() {
       <Index />
       <Toaster
           toastOptions={{
-              duration: 6000,
+              duration: 5000,
           }}
       />
     </div>
