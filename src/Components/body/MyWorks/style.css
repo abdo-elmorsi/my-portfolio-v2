@@ -13,7 +13,7 @@ figure.snip1321 * {
 }
 
 figure.snip1321 figcaption {
-  bottom: -20px;
+  bottom: -25px;
   left: 20px;
   right: 20px;
   position: absolute;
@@ -28,6 +28,7 @@ figure.snip1321 figcaption {
 
 figure.snip1321 svg {
   position: relative !important;
+  bottom: -5px;
   font-size: 12px;
   background-color: #a43f49;
   width: 40px;

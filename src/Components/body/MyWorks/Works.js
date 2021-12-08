@@ -19,13 +19,13 @@ function Works() {
         <figure className="snip1321">
           <img src={e.Src} alt={`project-${e.id}`} className="w-full" />
           <figcaption>
-            <div className="flex justify-around px-5">
-              <span className=" cursor-pointer">
+            <div className="flex justify-around">
+              <a href={e.link} target={`_blank`} className="cursor-pointer">
                 <FiExternalLink />
-              </span>
-              <span className=" cursor-pointer">
+              </a>
+              <a href={e.github} target={`_blank`} className="cursor-pointer">
                 <FaGithub />
-              </span>
+              </a>
             </div>
           </figcaption>
         </figure>

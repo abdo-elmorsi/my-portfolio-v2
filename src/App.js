@@ -1,16 +1,12 @@
 import "./App.css";
 import Index from "./Components/index"
-import { Toaster } from 'react-hot-toast'
-
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 function App() {
   return (
     <div className="App">
+      <ToastContainer />
       <Index />
-      <Toaster
-          toastOptions={{
-              duration: 5000,
-          }}
-      />
     </div>
   );
 }

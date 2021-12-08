@@ -39,7 +39,7 @@ function WhImGood() {
   return (
     <div
       id="What"
-      className="text-white text-center border-gray-500 border-b-4 pb-20"
+      className="text-white text-center"
     >
       <Header Name="What I’m good at?" Desc={Desc} />
       <div className="flex justify-around flex-wrap">

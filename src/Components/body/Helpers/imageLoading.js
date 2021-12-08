@@ -18,9 +18,8 @@ const ImageLoader = ({ src, alt = "", className = "" }) => {
       )}
       <img
         alt={alt || ""}
-        className={`${className || ""} ${
-          loaded ? "is-img-loaded" : "is-img-loading"
-        }`}
+        className={`${'transition duration-500 ease-in-out'} ${loaded ? "is-img-loaded" : "is-img-loading"
+          }`}
         onLoad={onLoad}
         src={src}
       />
