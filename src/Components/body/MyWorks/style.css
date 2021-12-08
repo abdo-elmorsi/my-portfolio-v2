@@ -31,11 +31,11 @@ figure.snip1321 svg {
   bottom: -5px;
   font-size: 12px;
   background-color: #a43f49;
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
   display: inline-block;
   text-align: center;
-  line-height: 40px;
   border-radius: 5px;
   color: #fff;
   padding: 10px;

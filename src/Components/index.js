@@ -13,7 +13,7 @@ function App() {
         <div className={`md:w-3/12`}>
           <Sidbar />
         </div>
-        <div className="px-6 md:px-12 md:w-9/12">
+        <div className="px-6 md:px-12 md:w-9/12 min-h-screen">
           <Switch>
             <Route exact path="/" component={AboutMe} />
             <Route path="/mysk" component={MySkills} />
