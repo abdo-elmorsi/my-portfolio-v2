@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { IoClose } from "react-icons/io5";
 import ImageLoader from "../body/Helpers/imageLoading";
-import { AiOutlineArrowUp } from "react-icons/ai";
-import Button from "../body/Helpers/Button";
-import { Router, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./style.css";
 import {
     FaFacebookF,
@@ -130,11 +128,13 @@ function Sidbar() {
                                         key={`ele-${index}`}
                                         className="flex items-center font-bold text-lg rounded-sm bg-primary p-2 hover:bg-white hover:text-primary cursor-pointer relative"
                                         data-title={`${ele.title}`}
-                                        onClick={() =>
-                                            window.location.assign(ele.link)
-                                        }
+                                        // onClick={() =>
+                                        //     window.location.assign(ele.link)
+                                        // }
                                     >
-                                        {ele.icon}
+                                        <a href={ele.link} target={`_blank`}>
+                                            {ele.icon}
+                                        </a>
                                     </li>
                                 );
                             })}

@@ -35,7 +35,7 @@ function ContactMe() {
                         <input
                             type="text"
                             name="name"
-                            autocomplete="off"
+                            autoComplete="off"
                             className="w-5/12 bg-third focus:bg-secondary pl-2 text-white border-2 focus:outline-none animation duration-500 ease-in-out"
                             placeholder="Your name..."
                             required
@@ -43,7 +43,7 @@ function ContactMe() {
                         <input
                             type="email"
                             name="user-email"
-                            autocomplete="on"
+                            autoComplete="on"
                             className="w-5/12 bg-third focus:bg-secondary pl-2 py-2 text-white border-2 focus:outline-none animation duration-500 ease-in-out"
                             placeholder="Your email..."
                             required
@@ -53,7 +53,7 @@ function ContactMe() {
                         <input
                             type="text"
                             name="user_subject"
-                            autocomplete="off"
+                            autoComplete="off"
                             className="w-full bg-third focus:bg-secondary pl-2 py-2 text-white border-2 focus:outline-none animation duration-500 ease-in-out"
                             placeholder="Subject..."
                             required
