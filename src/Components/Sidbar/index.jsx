@@ -111,8 +111,8 @@ function Sidbar() {
                                         <li
                                             onClick={() => fun()}
                                             className={`py-4 border-t-2 ${
-                                                i === 4 ? "border-b-2" : ""
-                                            } border-white font-bold text-pase hover:bg-white hover:text-primary cursor-pointer`}
+                                                i === 4 ? "" : ""
+                                            }  text-pase hover:bg-white hover:text-primary cursor-pointer`}
                                         >
                                             {ele}
                                         </li>
@@ -127,7 +127,7 @@ function Sidbar() {
                                 return (
                                     <li
                                         key={`ele-${index}`}
-                                        className="flex items-center font-bold text-lg rounded-full bg-primary p-2 hover:bg-white hover:text-primary cursor-pointer relative"
+                                        className="flex items-center rounded-full bg-primary p-2 hover:bg-white hover:text-primary cursor-pointer relative"
                                         data-title={`${ele.title}`}
                                     >
                                         <a href={ele.link} target={`_blank`}>

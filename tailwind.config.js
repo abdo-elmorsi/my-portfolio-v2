@@ -9,7 +9,7 @@ module.exports = {
                 main: ["Open Sans", ...defaultTheme.fontFamily.sans],
             },
             colors: {
-                primary: "#a43f49",
+                primary: "#485460",
                 secondary: "rgba(0, 0, 0, 0.2)",
                 third: "rgba(250, 250, 250, 0.1)",
             },
