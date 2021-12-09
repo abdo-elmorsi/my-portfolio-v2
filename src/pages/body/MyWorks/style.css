@@ -3,6 +3,7 @@ figure.snip1321 {
   text-align: center;
   -webkit-perspective: 50em;
   perspective: 50em;
+  border-radius: 4px;
 }
 
 figure.snip1321 * {
@@ -30,7 +31,7 @@ figure.snip1321 svg {
   position: relative !important;
   bottom: -5px;
   font-size: 12px;
-  background-color: #a43f49;
+  background-color: #485460;
   width: 35px;
   height: 35px;
   line-height: 35px;
@@ -49,7 +50,7 @@ figure.snip1321:after {
   position: absolute;
   content: "";
   display: block;
-  top: 70%;
+  top: 73%;
   left: 20px;
   right: 20px;
   bottom: 0px;

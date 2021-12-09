@@ -1,8 +1,10 @@
 import React, { useRef } from "react";
-import Header from "../Helpers/Headers/header";
-import Button from "../Helpers/Button";
+import Header from "../../../Helpers/Headers/header";
+import Button from "../../../Helpers/Button";
 import emailjs from "emailjs-com";
 import { toast } from "react-toastify";
+import { motion } from "framer-motion";
+import { slideDown } from "../../../Helpers/Animation";
 function ContactMe() {
     const formData = useRef();
     const sendEmail = (e) => {
@@ -31,7 +33,16 @@ function ContactMe() {
             <Header Name="Contact Me" />
             <div>
                 <form method="POST" ref={formData} onSubmit={sendEmail}>
-                    <div className="flex justify-between">
+                    <motion.div
+                        variants={slideDown}
+                        animate="visible"
+                        initial="hidden"
+                        transition={{
+                            ease: "easeInOut",
+                            duration: 0.6,
+                        }}
+                        className="flex justify-between"
+                    >
                         <input
                             type="text"
                             name="name"
@@ -48,8 +59,18 @@ function ContactMe() {
                             placeholder="Your email..."
                             required
                         />
-                    </div>
-                    <div className="my-6">
+                    </motion.div>
+                    <motion.div
+                        variants={slideDown}
+                        initial="hidden"
+                        animate="visible"
+                        transition={{
+                            ease: "easeInOut",
+                            duration: 0.6,
+                            delay: 0.4,
+                        }}
+                        className="my-6"
+                    >
                         <input
                             type="text"
                             name="user_subject"
@@ -58,8 +79,17 @@ function ContactMe() {
                             placeholder="Subject..."
                             required
                         />
-                    </div>
-                    <div>
+                    </motion.div>
+                    <motion.div
+                        variants={slideDown}
+                        initial="hidden"
+                        animate="visible"
+                        transition={{
+                            ease: "easeInOut",
+                            duration: 0.6,
+                            delay: 0.8,
+                        }}
+                    >
                         <textarea
                             name="message"
                             rows="6"
@@ -67,8 +97,19 @@ function ContactMe() {
                             placeholder="Your message..."
                             required
                         ></textarea>
-                    </div>
-                    <Button msg={"Send"} px={"6"} />
+                    </motion.div>
+                    <motion.div
+                        variants={slideDown}
+                        initial="hidden"
+                        animate="visible"
+                        transition={{
+                            ease: "easeInOut",
+                            duration: 0.6,
+                            delay: 1.2,
+                        }}
+                    >
+                        <Button msg={"Send"} px={"6"} />
+                    </motion.div>
                 </form>
             </div>
         </div>

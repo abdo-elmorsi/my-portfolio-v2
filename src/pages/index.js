@@ -4,7 +4,7 @@ import MySkills from "./body/MySkills";
 import WhImGood from "./body/WhImGood";
 import MyWorks from "./body/MyWorks";
 import ContactMe from "./body/ContactMe";
-import Container from "./body/Helpers/Container";
+import Container from "../Helpers/Container";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 function App() {
   return (

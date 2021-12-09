@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { IoClose } from "react-icons/io5";
-import ImageLoader from "../body/Helpers/imageLoading";
-import { Link } from "react-router-dom";
+import ImageLoader from "../../Helpers/imageLoading";
+import { NavLink } from "react-router-dom";
 import "./style.css";
 import {
     FaFacebookF,
@@ -11,6 +11,8 @@ import {
     FaWhatsapp,
 } from "react-icons/fa";
 import { FiMenu } from "react-icons/fi";
+import { motion } from "framer-motion";
+import { slideDown } from "../../Helpers/Animation";
 function Sidbar() {
     const [Menu, setMenu] = useState(false);
     let fun = () => (window.innerWidth < 768 ? setMenu(false) : setMenu(true));
@@ -60,7 +62,7 @@ function Sidbar() {
             >
                 <div
                     className={`
-          bg-primary text-center text-white min-h-screen md:pt-4 md:block transform transition duration-500 ease-out z-10 
+          bg-primary text-center text-white min-h-screen md:pt-8 md:block transform transition duration-500 ease-out z-10 
           ${Menu ? "" : "-translate-x-full"}`}
                 >
                     <div
@@ -90,7 +92,8 @@ function Sidbar() {
                                 "Contact Us",
                             ].map((ele, i) => {
                                 return (
-                                    <Link
+                                    <NavLink
+                                        exact
                                         key={i}
                                         to={
                                             i === 0
@@ -108,32 +111,48 @@ function Sidbar() {
                                                       .toLowerCase()
                                         }
                                     >
-                                        <li
+                                        <motion.li
+                                            variants={slideDown}
+                                            initial="hidden"
+                                            animate="visible"
+                                            transition={{
+                                                ease: "easeInOut",
+                                                duration: 0.6,
+                                                delay: i * 0.4,
+                                            }}
                                             onClick={() => fun()}
                                             className={`py-4 border-t-2 ${
-                                                i === 4 ? "" : ""
+                                                i === 4 ? "border-b-2" : ""
                                             }  text-pase hover:bg-white hover:text-primary cursor-pointer`}
                                         >
                                             {ele}
-                                        </li>
-                                    </Link>
+                                        </motion.li>
+                                    </NavLink>
                                 );
                             })}
                         </ul>
                     </div>
-                    <div className="my-4">
-                        <ul className="flex justify-around">
-                            {icons.map((ele, index) => {
+                    <div className="mt-8">
+                        <ul className="flex justify-around px-2 lg:px-8">
+                            {icons.map((ele, i) => {
                                 return (
-                                    <li
-                                        key={`ele-${index}`}
+                                    <motion.li
+                                        variants={slideDown}
+                                        initial="hidden"
+                                        animate="visible"
+                                        transition={{
+                                            ease: "easeInOut",
+                                            duration: 0.6,
+                                            delay: (i + 6 - 0.2) * 0.4,
+                                        }}
+                                        key={`ele-${i}`}
                                         className="flex items-center rounded-full bg-primary p-2 hover:bg-white hover:text-primary cursor-pointer relative"
                                         data-title={`${ele.title}`}
                                     >
                                         <a href={ele.link} target={`_blank`}>
                                             {ele.icon}
                                         </a>
-                                    </li>
+                                    </motion.li>
                                 );
                             })}
                         </ul>

@@ -1,8 +1,8 @@
-ul li.active {
+ul a.active li {
   background-color: white;
-  color: #a43f49;
+  color: #1e272e;
 }
-ul li {
+ul li  {
   transition: all 0.4s ease-in-out;
   border-color: #1e272e;
 }
