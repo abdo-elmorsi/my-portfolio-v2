@@ -138,9 +138,6 @@ function Sidbar() {
                             })}
                         </ul>
                     </div>
-                    <footer className="border-secondary border-t-2 py-5">
-                        <p className="text-md">Copyright 2021 Abdo Ahmed</p>
-                    </footer>
                 </div>
             </div>
         </>
