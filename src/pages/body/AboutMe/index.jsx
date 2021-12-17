@@ -32,7 +32,7 @@ const AbouMe = () => {
                     initial="hidden"
                     className="w-full lg:w-6/12 text-left p-0 pt-3 md:p-5 space-y-4 md:space-y-7"
                 >
-                    <h2 className="text-3xl font-bold">Education</h2>
+                    <h2 className="text-3xl font-bold">Education </h2>
                     <p className="mt-7">
                         I study in Integrated Thebes Academy of Sciences
                     </p>
