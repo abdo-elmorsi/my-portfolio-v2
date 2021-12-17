@@ -6,6 +6,7 @@ import MyWorks from "./body/MyWorks";
 import ContactMe from "./body/ContactMe";
 import Container from "../Helpers/Container";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
+import PrivatePage from "./PrivatePage";
 function App() {
   return (
     <Container>
@@ -20,6 +21,7 @@ function App() {
             <Route path="/what" component={WhImGood} />
             <Route path="/my" component={MyWorks} />
             <Route path="/contact" component={ContactMe} />
+            <Route path="*" component={PrivatePage} />
           </Switch>
         </div>
       </Router>

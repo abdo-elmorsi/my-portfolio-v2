@@ -4,6 +4,7 @@ import { FiExternalLink } from "react-icons/fi";
 import { motion } from 'framer-motion'
 import { slideDown } from "../../../Helpers/Animation";
 import "./style.css";
+import { Link } from "react-router-dom";
 function Works() {
   const [Data, setData] = useState([]);
   useEffect(() => {
@@ -31,12 +32,26 @@ function Works() {
             <img src={e.Src} alt={`project-${e.id}`} className="w-full" />
             <figcaption>
               <div className="flex justify-around">
-                <a href={e.link} target={`_blank`} className="cursor-pointer">
-                  <FiExternalLink />
-                </a>
-                <a href={e.github} target={`_blank`} className="cursor-pointer">
-                  <FaGithub />
-                </a>
+                {e.link.startsWith("http") &&
+                  <a href={e.link} target={`_blank`} className="cursor-pointer">
+                    <FiExternalLink />
+                  </a>
+                }
+                {!e.link.startsWith("http") &&
+                  <Link to={e.link} className="cursor-pointer">
+                    <FiExternalLink />
+                  </Link>
+                }
+                {e.github.startsWith("http") &&
+                  <a href={e.github} target={`_blank`} className="cursor-pointer">
+                    <FaGithub />
+                  </a>
+                }
+                {!e.github.startsWith("http") &&
+                  <Link to={e.link} className="cursor-pointer">
+                    <FiExternalLink />
+                  </Link>
+                }
               </div>
             </figcaption>
           </figure>
