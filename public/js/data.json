@@ -2,7 +2,7 @@
     "Works": [
         {
             "id": 1,
-            "Src": "./images/works/01.png",
+            "Src": "./images/works/01.pg",
             "Name": "first",
             "Desc": "using react",
             "link": "https://souk.vercel.app/",
@@ -18,7 +18,7 @@
         },
         {
             "id": 3,
-            "Src": "./images/works/03.png",
+            "Src": "./images/works/03.pg",
             "Name": "third",
             "Desc": "using react",
             "link": "/private",

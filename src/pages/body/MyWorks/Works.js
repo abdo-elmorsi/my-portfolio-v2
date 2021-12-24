@@ -5,6 +5,7 @@ import { motion } from 'framer-motion'
 import { slideDown } from "../../../Helpers/Animation";
 import "./style.css";
 import { Link } from "react-router-dom";
+import ImageLoader from "../../../Helpers/imageLoading";
 function Works() {
   const [Data, setData] = useState([]);
   useEffect(() => {
@@ -24,30 +25,27 @@ function Works() {
             duration: 0.6,
             delay: i * 0.4,
           }}
-          className="isotope-item w-full lg:w-5/12 mb-5"
-          data-type="Games"
+          className="isotope-item bg-primary w-full lg:w-5/12 mb-5"
           key={e.id}
         >
-          <figure className="snip1321">
-            <img src={e.Src} alt={`project-${e.id}`} className="w-full" />
+          <figure className="snip1321 h-full">
+            <ImageLoader src={e.Src} alt={`project-${e.id}`} className="w-full" />
             <figcaption>
               <div className="flex justify-around">
-                {e.link.startsWith("http") &&
+                {e.link.startsWith("http") ?
                   <a href={e.link} target={`_blank`} className="cursor-pointer">
                     <FiExternalLink />
                   </a>
-                }
-                {!e.link.startsWith("http") &&
-                  <Link to={e.link} className="cursor-pointer">
+                  : <Link to={e.link} className="cursor-pointer">
                     <FiExternalLink />
                   </Link>
                 }
-                {e.github.startsWith("http") &&
+
+                {e.github.startsWith("http") ?
                   <a href={e.github} target={`_blank`} className="cursor-pointer">
                     <FaGithub />
                   </a>
-                }
-                {!e.github.startsWith("http") &&
+                  :
                   <Link to={e.link} className="cursor-pointer">
                     <FiExternalLink />
                   </Link>

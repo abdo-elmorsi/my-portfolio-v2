@@ -11,8 +11,10 @@ import {
     FaWhatsapp,
 } from "react-icons/fa";
 import { FiMenu } from "react-icons/fi";
+import { slideUp, animateList } from "../../Helpers/Animation";
 import { motion } from "framer-motion";
-import { slideDown } from "../../Helpers/Animation";
+import { ScrollReveal } from "../../Helpers/Animation";
+
 function Sidbar() {
     const [Menu, setMenu] = useState(false);
     let fun = () => (window.innerWidth < 768 ? setMenu(false) : setMenu(true));
@@ -85,7 +87,7 @@ function Sidbar() {
                     <p className="text-xs mt-1">
                         {"React JS  "}
                         <a
-                        className="px-2"
+                            className="px-2"
                             title="Download Cv"
                             href="/Resume.pdf"
                             download
@@ -110,79 +112,78 @@ function Sidbar() {
                         </a>
                     </p>
                     <div className="mt-12 lg:mt-5 flex flex-col">
-                        <ul>
-                            {[
-                                "About Me",
-                                "My Work",
-                                "My Skills",
-                                "What i'm good at",
-                                "Contact Us",
-                            ].map((ele, i) => {
-                                return (
-                                    <NavLink
-                                        exact
-                                        key={i}
-                                        to={
-                                            i === 0
-                                                ? "/"
-                                                : i === 2
-                                                ? `${ele
-                                                      .split(" ")
-                                                      .slice(0, 1)
-                                                      .toString()
-                                                      .toLowerCase()}sk`
-                                                : ele
-                                                      .split(" ")
-                                                      .slice(0, 1)
-                                                      .toString()
-                                                      .toLowerCase()
-                                        }
-                                    >
-                                        <motion.li
-                                            variants={slideDown}
-                                            initial="hidden"
-                                            animate="visible"
-                                            transition={{
-                                                ease: "easeInOut",
-                                                duration: 0.6,
-                                                delay: i * 0.4,
-                                            }}
-                                            onClick={() => fun()}
-                                            className={`py-4 border-t-2 ${
-                                                i === 4 ? "border-b-2" : ""
-                                            }  text-pase hover:bg-white hover:text-primary cursor-pointer`}
+                        <ScrollReveal variants={animateList}>
+                            <ul>
+                                {[
+                                    "About Me",
+                                    "My Works",
+                                    "My Skills",
+                                    "What i'm good at",
+                                    "Contact Us",
+                                ].map((ele, i) => {
+                                    return (
+                                        <NavLink
+                                            exact
+                                            key={i}
+                                            to={
+                                                i === 0
+                                                    ? "/"
+                                                    : i === 2
+                                                    ? `${ele
+                                                          .split(" ")
+                                                          .slice(0, 1)
+                                                          .toString()
+                                                          .toLowerCase()}sk`
+                                                    : ele
+                                                          .split(" ")
+                                                          .slice(0, 1)
+                                                          .toString()
+                                                          .toLowerCase()
+                                            }
                                         >
-                                            {ele}
-                                        </motion.li>
-                                    </NavLink>
-                                );
-                            })}
-                        </ul>
+                                            <motion.li
+                                                variants={slideUp}
+                                                transition={{
+                                                    delay: (i - 0.8) * 0.5,
+                                                }}
+                                                onClick={() => fun()}
+                                                className={`py-4 border-t-2 ${
+                                                    i === 4 ? "border-b-2" : ""
+                                                }  text-pase hover:bg-white hover:text-primary cursor-pointer`}
+                                            >
+                                                {ele}
+                                            </motion.li>
+                                        </NavLink>
+                                    );
+                                })}
+                            </ul>
+                        </ScrollReveal>
                     </div>
                     <div className="mt-8">
-                        <ul className="flex justify-around px-2 lg:px-8">
-                            {icons.map((ele, i) => {
-                                return (
-                                    <motion.li
-                                        variants={slideDown}
-                                        initial="hidden"
-                                        animate="visible"
-                                        transition={{
-                                            ease: "easeInOut",
-                                            duration: 0.6,
-                                            delay: (i + 6 - 0.2) * 0.4,
-                                        }}
-                                        key={`ele-${i}`}
-                                        className="flex items-center rounded-full bg-primary p-2 hover:bg-white hover:text-primary cursor-pointer relative"
-                                        data-title={`${ele.title}`}
-                                    >
-                                        <a href={ele.link} target={`_blank`}>
-                                            {ele.icon}
-                                        </a>
-                                    </motion.li>
-                                );
-                            })}
-                        </ul>
+                        <ScrollReveal variants={animateList}>
+                            <ul className="flex justify-around px-2 lg:px-8">
+                                {icons.map((ele, i) => {
+                                    return (
+                                        <motion.li
+                                            key={i}
+                                            variants={slideUp}
+                                            transition={{
+                                                delay: (i + 4.8 - 0.4) * 0.4,
+                                            }}
+                                            className="flex items-center rounded-full bg-primary p-2 hover:bg-white hover:text-primary cursor-pointer relative"
+                                            data-title={`${ele.title}`}
+                                        >
+                                            <a
+                                                href={ele.link}
+                                                target={`_blank`}
+                                            >
+                                                {ele.icon}
+                                            </a>
+                                        </motion.li>
+                                    );
+                                })}
+                            </ul>
+                        </ScrollReveal>
                     </div>
                 </div>
             </div>
