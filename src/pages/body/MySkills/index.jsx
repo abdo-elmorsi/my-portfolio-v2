@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css";
-import ImageLoader from "../../../Helpers/imageLoading";
-import Header from "../../../Helpers/Headers/header";
+import ImageLoader from "../../../Helpers/imageLoading/index";
+import Header from "../../../Components/Headers";
 // import Button from "../../../Helpers/Button";
 import { motion } from "framer-motion";
 import { slideToLeft, slideToRight } from "../../../Helpers/Animation";

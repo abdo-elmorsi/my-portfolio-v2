@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "../../../Helpers/Headers/header";
+import Header from "../../../Components/Headers";
 import Box from "./Box";
 import "./Box.css";
 // let Desc = `I Am A Front-End Developer With More Than Two Years Of Experience. I Am

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { IoClose } from "react-icons/io5";
-import ImageLoader from "../../Helpers/imageLoading";
+import ImageLoader from "../../Helpers/imageLoading/index";
 import { NavLink } from "react-router-dom";
 import "./style.css";
 import {
@@ -115,11 +115,11 @@ function Sidbar() {
                         <ScrollReveal variants={animateList}>
                             <ul>
                                 {[
-                                    "About Me",
-                                    "My Works",
-                                    "My Skills",
+                                    "About me",
+                                    "My works",
+                                    "My skills",
                                     "What i'm good at",
-                                    "Contact Us",
+                                    "Contact me",
                                 ].map((ele, i) => {
                                     return (
                                         <NavLink

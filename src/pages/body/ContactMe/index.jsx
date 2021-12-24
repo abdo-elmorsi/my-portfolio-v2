@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
-import Header from "../../../Helpers/Headers/header";
-import Button from "../../../Helpers/Button";
+import Header from "../../../Components/Headers";
+import Button from "../../../Components/Button";
 import emailjs from "emailjs-com";
 import { toast } from "react-toastify";
 import { motion } from "framer-motion";

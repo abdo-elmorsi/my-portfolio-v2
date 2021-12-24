@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 import { slideDown } from "../../../Helpers/Animation";
 import "./style.css";
 import { Link } from "react-router-dom";
-import ImageLoader from "../../../Helpers/imageLoading";
+import ImageLoader from "../../../Helpers/imageLoading/index";
 function Works() {
   const [Data, setData] = useState([]);
   useEffect(() => {

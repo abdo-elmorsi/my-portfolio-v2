@@ -1,8 +1,8 @@
 import React from "react";
 import "./style.css";
-import ImageLoader from "../../../Helpers/imageLoading";
-import Header from "../../../Helpers/Headers/header";
-// import Button from "../../../Helpers/Button";
+import ImageLoader from "../../../Helpers/imageLoading/index";
+import Header from "../../../Components/Headers";
+// import Button from "../../../Components/Button";
 import { motion } from "framer-motion";
 import { slideToLeft, slideToRight } from "../../../Helpers/Animation";
 let Desc = `I Am A Front-End Developer With More Than Two Years Of Experience. I Am
