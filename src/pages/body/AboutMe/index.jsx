@@ -22,7 +22,7 @@ const AbouMe = () => {
                 >
                     <ImageLoader
                         src={"./images/left-image.jpg"}
-                        className="filter blur-sm transition duration-500 ease-in-out"
+                        className=""
                         alt=""
                     />
                 </motion.div>

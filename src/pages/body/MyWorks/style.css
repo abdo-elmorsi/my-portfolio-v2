@@ -6,7 +6,8 @@ figure.snip1321 {
     border-radius: 4px;
 }
 
-figure.snip1321 * {
+figure.snip1321 figcaption,
+figure.snip1321 figcaption * {
     -webkit-box-sizing: padding-box;
     box-sizing: padding-box;
     -webkit-transition: all 0.2s ease-out;

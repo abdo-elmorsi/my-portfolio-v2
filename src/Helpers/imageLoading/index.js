@@ -23,7 +23,7 @@ const ImageLoader = ({ src, alt, style, className, width, height }) => {
       <img
         onLoad={onLoad}
         alt={alt || ''}
-        className={`${className || ''} ${loaded ? 'is-img-loaded' : 'is-img-loading'}`}
+        className={`transform transition duration-500 hover:scale-110 ${className || ''} ${loaded ? 'is-img-loaded' : 'is-img-loading'}`}
         src={src}
         width={width}
         height={height}
