@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { FaGithub } from "react-icons/fa";
 import { FiExternalLink } from "react-icons/fi";
+import { RiGitRepositoryPrivateLine } from "react-icons/ri";
+
 import { motion } from 'framer-motion'
 import { slideDown } from "../../../Helpers/Animation";
 import "./style.css";
@@ -10,8 +12,8 @@ function Works() {
   const [Data, setData] = useState([]);
   useEffect(() => {
     fetch("js/data.json")
-      .then((response) => response.json())
-      .then((data) => setData(data.Works));
+      .then((res) => res.json())
+      .then(({ Works }) => setData(Works));
   }, []);
   return (
     <div className="flex flex-wrap justify-around">
@@ -29,7 +31,7 @@ function Works() {
           key={e.id}
         >
           <figure className="snip1321 h-full">
-            <ImageLoader src={e.Src} alt={`project-${e.id}`} className="w-full" />
+            <ImageLoader src={e.Src} alt={`project-${e.id}`} className="w-full min-h-full" />
             <figcaption>
               <div className="flex justify-around">
                 {e.link.startsWith("http") ?
@@ -37,7 +39,7 @@ function Works() {
                     <FiExternalLink />
                   </a>
                   : <Link to={e.link} className="cursor-pointer">
-                    <FiExternalLink />
+                    <RiGitRepositoryPrivateLine />
                   </Link>
                 }
 
@@ -47,7 +49,7 @@ function Works() {
                   </a>
                   :
                   <Link to={e.link} className="cursor-pointer">
-                    <FiExternalLink />
+                    <RiGitRepositoryPrivateLine />
                   </Link>
                 }
               </div>

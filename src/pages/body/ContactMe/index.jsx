@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import Header from "../../../Components/Headers";
 import Button from "../../../Components/Button";
 import emailjs from "emailjs-com";
@@ -6,8 +6,10 @@ import { toast } from "react-toastify";
 import { motion } from "framer-motion";
 import { slideDown } from "../../../Helpers/Animation";
 function ContactMe() {
+    const [loading, setloading] = useState(false);
     const formData = useRef();
     const sendEmail = (e) => {
+        setloading(true);
         e.preventDefault();
         emailjs
             .sendForm(
@@ -16,17 +18,19 @@ function ContactMe() {
                 formData.current,
                 "user_ycFwwHNWHpDwHFWE3gajU"
             )
-            .then(() => {
+            .then((res) => {
                 toast.success("Your message has been sent", {
                     style: { fontSize: "20px" },
                 });
+                formData.current.reset();
+                setloading(false);
             })
-            .catch(() => {
+            .catch((er) => {
                 toast.error("Sorry there is an error", {
                     style: { fontSize: "20px" },
                 });
+                setloading(false);
             });
-        formData.current.reset();
     };
     return (
         <div id="Contact" className="text-white text-center">
@@ -108,7 +112,10 @@ function ContactMe() {
                             delay: 1.2,
                         }}
                     >
-                        <Button msg={"Send"} px={"6"} />
+                        <Button
+                            msg={`${loading ? "sending..." : "Send"}`}
+                            px={"6"}
+                        />
                     </motion.div>
                 </form>
             </div>
