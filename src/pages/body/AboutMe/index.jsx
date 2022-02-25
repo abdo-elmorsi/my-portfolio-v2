@@ -5,9 +5,12 @@ import Header from "../../../Components/Headers";
 // import Button from "../../../Components/Button";
 import { motion } from "framer-motion";
 import { slideToLeft, slideToRight } from "../../../Helpers/Animation";
-let Desc = `I Am A Front-End Developer With More Than Two Years Of Experience. I Am
-From Cairo, Egypt, And I Create Sites For Great People Around The World
-To Get More And More Experiences In Developing Sites.`;
+let Desc = `My name is Abdelrahman Ahmed. I am a self-motivated front-end developer with 1+ years of experience with hands-on
+experience in identifying web-based user interactions along with designing and implementing highly-responsive user
+interface components by deploying React concepts. Proficient in translating designs and wireframes into high-quality
+code and writing application interface code via Javascript and ReactJS workflows. Adept at monitoring and maintaining
+frontend troubleshooting and debugging the same to bolster overall performance.
+.`;
 
 const AbouMe = () => {
     return (
