@@ -6,7 +6,6 @@ import "./style.css";
 import {
     FaFacebookF,
     FaGithub,
-    FaTwitter,
     FaLinkedinIn,
     FaWhatsapp,
 } from "react-icons/fa";
@@ -28,11 +27,6 @@ function Sidbar() {
             link: "https://github.com/Abdo2711-coder",
             title: "github",
             icon: <FaGithub />,
-        },
-        {
-            link: "https://twitter.com/AbdoMoursy?s=09",
-            title: "twitter",
-            icon: <FaTwitter />,
         },
         {
             link: "https://www.linkedin.com/in/abdelrahman-elmorsy-163263205",
@@ -89,7 +83,7 @@ function Sidbar() {
                         <a
                             className="px-2"
                             title="Download Cv"
-                            href="/Resume.pdf"
+                            href="/Abdelrahman.pdf"
                             download
                         >
                             <svg
