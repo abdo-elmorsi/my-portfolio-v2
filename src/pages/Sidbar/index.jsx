@@ -77,9 +77,8 @@ function Sidbar() {
                     </div>
                     <h2 className="text-2xl font-bold">Abdo Elmorsy</h2>
 
-                    <span className="text-xs">Front End Developer</span>
+                    <span className="text-xs">Front End Developer | ReactJs</span>
                     <p className="text-xs mt-1">
-                        {"React JS  "}
                         <a
                             className="px-2"
                             title="Download Cv"
