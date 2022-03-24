@@ -29,6 +29,7 @@ const AbouMe = () => {
                         "Jquery & React.Js",
                         "Redux & Redux Toolkit",
                         "Next.js",
+                        "Firebase"
                     ].map((item, i) => (
                         <span
                             className={`w-6/12 lg:w-full mb-3 text-lg
@@ -40,6 +41,7 @@ const AbouMe = () => {
                             ${i === 5 && " text-blue-400"}
                             ${i === 6 && " text-blue-300"}
                             ${i === 7 && " text-blue-400"}
+                            ${i === 8 && " text-blue-700"}
                             `}
                             key={i}
                         >
