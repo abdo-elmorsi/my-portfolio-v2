@@ -41,7 +41,7 @@ const AbouMe = () => {
                             ${i === 5 && " text-blue-400"}
                             ${i === 6 && " text-blue-300"}
                             ${i === 7 && " text-blue-400"}
-                            ${i === 8 && " text-blue-700"}
+                            ${i === 8 && " text-yellow-300"}
                             `}
                             key={i}
                         >
