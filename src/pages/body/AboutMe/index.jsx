@@ -1,16 +1,11 @@
 import React from "react";
-import "./style.css";
+import "./style.CSS";
 import ImageLoader from "../../../Helpers/imageLoading/index";
 import Header from "../../../Components/Headers";
 // import Button from "../../../Components/Button";
 import { motion } from "framer-motion";
 import { slideToLeft, slideToRight } from "../../../Helpers/Animation";
-let Desc = `My name is Abdelrahman Ahmed. I am a self-motivated front-end developer with 1+ years of experience with hands-on
-experience in identifying web-based user interactions along with designing and implementing highly-responsive user
-interface components by deploying React concepts. Proficient in translating designs and wireframes into high-quality
-code and writing application interface code via Javascript and ReactJS workflows. Adept at monitoring and maintaining
-frontend troubleshooting and debugging the same to bolster overall performance.
-.`;
+let Desc = `I am a Front End developer with industry experience building websites and web applications. I specialize in JavaScript and have professional experience working with React. I also have experience working with Html 5, CSS 3, BootStrap, Sass, Styled Components, JavaScript, JQuery, React, and Redux. Take a look at my work or get in touch! https://elmorsy.vercel.app/my`;
 
 const AbouMe = () => {
     return (
