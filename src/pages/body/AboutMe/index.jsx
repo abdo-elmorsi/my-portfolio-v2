@@ -1,5 +1,5 @@
 import React from "react";
-import "./style.CSS";
+import "./style.css";
 import ImageLoader from "../../../Helpers/imageLoading/index";
 import Header from "../../../Components/Headers";
 // import Button from "../../../Components/Button";
